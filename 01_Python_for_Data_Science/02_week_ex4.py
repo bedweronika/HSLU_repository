@@ -36,5 +36,3 @@ for elem in numb_list:
             third = elem
 
 print(f"Ordered numbers: {first}  {second}  {third}")
-
-    
