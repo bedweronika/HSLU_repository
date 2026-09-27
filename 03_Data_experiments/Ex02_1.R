@@ -5,19 +5,42 @@ difference in the number of countries visited in the last 12 months
 df <- read.csv('./Out_Data/lecture2_math.csv')
 head(df)
 
-df[c('gender', 'countries')]
+# df[c('gender', 'countries')]
+
+
+library(janitor)    ## execute install.packages("janitor", dependencies=TRUE)
+library(tidyverse)    ## execute install.packages("tidyverse", dependencies=TRUE)
+
+df %>% tabyl(countries, gender)
+
+
+"
+5. What is the drawback of using a scatter plot in the example
+above? What does it hide?
+"
+# scatter plot cannot be used because gender observation does not have numeric values
 
 
 
-'
-gender <- df$gender
-# gender.female <- gender
-countries <- df$countries
-tapply(countries, gender, FUN=mean)
+"
+6. Do the number of gym visits in the last month (gym_visits)
+differ by gender?
+"
+df %>% tabyl(gym_visits, gender)
 
 
-df %>% group_by(gender)
-'
 
-library(janitor)
-df %>% tabyl(gender,countries)
+"
+7. Look at a scatter plot between the number of countries visited
+(countries) and academic performance (math_points).
+"
+plot(df$countries, df$math_points)
+
+
+
+"
+8. Look at a scatter plot between the number of gym visits
+(gym_visits) and academic performance (math_points).
+"
+plot(df$gym_visits, df$math_points)
+
