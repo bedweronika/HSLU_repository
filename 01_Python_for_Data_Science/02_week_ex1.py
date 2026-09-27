@@ -15,3 +15,4 @@ elif 6 <= input <= 7:
     print("Enjoy your weekend...!")
 else: 
     print("Wrong input...!")
+    
