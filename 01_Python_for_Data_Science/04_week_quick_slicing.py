@@ -13,11 +13,14 @@ iter = 0
 result_string = ""
 while temp_string != "":
     sign = temp_string[-1]
-    temp_string = temp_string[:-2]
-    if sign in string.ascii_letters:
-        iter += 1
+    temp_string = temp_string[:-1]
+    if sign in string.ascii_letters or sign == " ":
         if iter%7==0:
             result_string += sign
+        iter += 1
 
+print(string.ascii_letters)
 print(result_string)
 
+# teacher solution
+print(my_string[-11:4:-7])
