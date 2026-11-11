@@ -42,5 +42,4 @@ for qm in s:
     q_dict[qm] = category
 
 
-
 print(q_dict)
