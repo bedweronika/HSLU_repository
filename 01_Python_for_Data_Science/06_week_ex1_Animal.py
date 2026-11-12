@@ -63,7 +63,7 @@ file_path = ".\\01_Python_for_Data_Science\\animals.csv"
 # read file and create the list
 with open(file_path, "r") as file:
     for line in file:
-        animal = line[:-2].replace(" ", "").split(",")
+        animal = line[:-1].replace(" ", "").split(",")
         if animal[0] != "animal_type":
             Animal(*animal).__str__()
             if animal[0].lower() == "Dog".lower():
