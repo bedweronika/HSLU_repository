@@ -20,11 +20,13 @@ class Animal:
     def __str__(self):
         print(f"Hi, I'm a {self.animal_type} and my name is {self.name}!")
 
+
 """
 Part b):
 Now we are interested in the various sounds the animal types make. Write a separate class for each animal type.
 Provide a method ”speak”, which depending on the animal type prints different sounds.
 """
+
 
 class Dog(Animal):
 
@@ -34,6 +36,7 @@ class Dog(Animal):
     def speak(self):
         print("Woof-woof")
 
+
 class Cat(Animal):
 
     def __init__(self, animal_type, name, age, weight, legs):
@@ -42,6 +45,7 @@ class Cat(Animal):
     def speak(self):
         print("Meow meow")
 
+
 class Snake(Animal):
 
     def __init__(self, animal_type, name, age, weight, legs):
@@ -49,7 +53,6 @@ class Snake(Animal):
 
     def speak(self):
         print("SsssSSsss")
-
 
 
 
@@ -62,14 +65,13 @@ with open(file_path, "r") as file:
     for line in file:
         animal = line[:-2].replace(" ", "").split(",")
         if animal[0] != "animal_type":
-            animal_properties = animal[0], animal[1], animal[2], animal[3], animal[4]
-            Animal(*animal_properties).__str__()
+            Animal(*animal).__str__()
             if animal[0].lower() == "Dog".lower():
-                Dog(*animal_properties).speak()
+                Dog(*animal).speak()
             elif animal[0].lower() == "Cat".lower():
-                Cat(*animal_properties).speak()
+                Cat(*animal).speak()
             elif animal[0].lower() == "Snake".lower():
-                Snake(*animal_properties).speak()
+                Snake(*animal).speak()
             else:
                 print("WRONG ANIMAL")
             print()
