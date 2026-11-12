@@ -13,7 +13,5 @@ class MyStr(str):
     def bi_rev(self):
         return self.text[::-2]
 
-
-
 txt1 = MyStr('z!me ngosdf nsjir zbgocjx aewh!T')
 print(txt1.bi_rev())
