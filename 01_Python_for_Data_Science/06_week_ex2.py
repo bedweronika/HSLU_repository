@@ -39,5 +39,3 @@ my_input = input("Enter the text to recognise number of digits and letter:\t")
 
 CharRecognition(my_input).__str__()
             
-            
-    
